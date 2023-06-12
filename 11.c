@@ -4,6 +4,10 @@
 #include <time.h>
 int main(){
   int x,y;
+  char name[20];
+  printf("What is your name?\n> ");
+  scanf("%s",name);
+  printf("Hello, %s!\n",name);
   printf("Rolling dice...\n");
   srand(time(NULL));
   x = rand()%6+1;
@@ -12,9 +16,9 @@ int main(){
   printf("Die 2: %d\n",y);
   printf("Total value: %d\n",x+y);
   if((x+y)>7){
-    printf("You won\n");
+    printf("%s won!\n",name);
   }
   else {
-    printf("You lost\n");
+    printf("%s lost\n",name);
   }
 }
